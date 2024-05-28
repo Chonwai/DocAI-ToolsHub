@@ -1,9 +1,9 @@
 from flask import Flask
-# from v1.api import api_bp
+from v1.api import api_bp
 
 app = Flask(__name__)
 
-# app.register_blueprint(api_bp, url_prefix="/api/v1")
+app.register_blueprint(api_bp, url_prefix="/api/v1")
 
 
 @app.route("/api/python")
