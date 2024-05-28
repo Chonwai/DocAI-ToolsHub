@@ -1,7 +1,9 @@
 from flask import Flask, Blueprint, jsonify, request
+
 # from v1.api import api_bp
 import arxiv
-from v1.utils import create_response
+
+# from v1.utils import create_response
 
 app = Flask(__name__)
 
@@ -37,7 +39,11 @@ def search_arxiv():
                 }
             )
 
-        return create_response(success=True, data=results)
+        # return create_response(success=True, data=results)
+        response = {"success": True, "data": results, "errors": None}
+        return jsonify(response), 200
 
     except Exception as e:
-        return create_response(success=False, errors=str(e), status_code=500)
+        # return create_response(success=False, errors=str(e), status_code=500)
+        response = {"success": False, "data": None, "errors": str(e)}
+        return jsonify(response), 500
