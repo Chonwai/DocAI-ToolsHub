@@ -1,6 +1,6 @@
 # v1/api.py
 from flask import Blueprint
-from .arxiv import arxiv_bp
+from .arxiv_api import arxiv_bp
 
 api_bp = Blueprint("api_bp", __name__)
 
