@@ -1,5 +1,5 @@
 from flask import Flask
-from v1.api import api_bp
+# from v1.api import api_bp
 
 app = Flask(__name__)
 
