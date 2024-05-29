@@ -1,13 +1,12 @@
 from flask import Flask, Blueprint, jsonify, request
 
-# from v1.api import api_bp
+from v1.api import api_bp
 import arxiv
-
-# from v1.utils import create_response
+from v1.utils import create_response
 
 app = Flask(__name__)
 
-# app.register_blueprint(api_bp, url_prefix="/api/v1")
+app.register_blueprint(api_bp, url_prefix="/api/v1")
 
 
 @app.route("/api/python")
