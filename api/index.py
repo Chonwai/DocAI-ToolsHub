@@ -1,8 +1,8 @@
 from flask import Flask, Blueprint, jsonify, request
 
-from v1.api import api_bp
+from api.v1.api import api_bp
 import arxiv
-from v1.utils import create_response
+from api.v1.utils import create_response
 
 app = Flask(__name__)
 
