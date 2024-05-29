@@ -46,3 +46,7 @@ def search_arxiv():
         # return create_response(success=False, errors=str(e), status_code=500)
         response = {"success": False, "data": None, "errors": str(e)}
         return jsonify(response), 500
+
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5328)
